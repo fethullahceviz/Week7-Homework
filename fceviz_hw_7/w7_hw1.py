@@ -8,5 +8,10 @@ Output  : VZ4PF94B6
 """
 
 import re
-print("ID Number :", re.search( pattern = r"[a-zA-Z]{2}\d[a-zA-Z]{2}\d{2}[a-zA-Z]\d", 
-                                string  = input("Enter a text: ")).group())
+try:
+    patern  =r"[a-zA-Z]{2}\d[a-zA-Z]{2}\d{2}[a-zA-Z]\d"
+    string  =input("Enter a text: ")
+    ddd     =re.search(patern,string).group()
+    print("ID Number :", ddd)
+except:
+    print("ID number not found matching the criteria")
